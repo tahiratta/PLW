@@ -1,0 +1,160 @@
+
+
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block pagecontent %}
+
+
+
+
+
+<!-- End of nav bar -->
+
+        <div class="page-head">
+            <div class="container">
+                <div class="row">
+                    <div class="page-head-content">
+                        <h1 class="page-title">Welcom : <span class="orange strong">{{ lander.user.username }}</span></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End page header -->
+
+        <!-- property area -->
+        <div class="content-area user-profiel">&nbsp;
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1 profiel-container">
+                     {#    show profile               #}
+                        <form action="" method="">
+                            <div class="profiel-header">
+                                <h3>
+                                    <b>BUILD</b> YOUR PROFILE <br>
+                                    <small style="color: white">This information will let us know more about you.</small>
+                                </h3>
+                                <hr>
+                            </div>
+
+                            <div class="clear">
+                                <div class="col-sm-3 col-sm-offset-1">
+                                    <div class="picture-container">
+                                        <div class="picture">
+                                            <img src="{% static 'assets/img/avatar.png' %}" class="picture-src" id="wizardPicturePreview" title=""/>
+{#
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3 padding-top-25 col-md-offset-1 ">
+
+                                    <div class="form-group">
+                                        <label>First Name </label>
+                                        <input name="firstname" type="text" class="form-control" disabled value="{{ lander.user.first_name }}" >
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Last Name </label>
+                                        <input name="lastname" type="text" class="form-control" disabled value="{{ lander.user.last_name }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>ENTITY NAME</label>
+                                        <input name="text" type="text" class="form-control" disabled value="{{ lander.entity_name }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>LOAN RANGE </label>
+                                        <input name="text" type="text" class="form-control" disabled value="{{ lander.loan_range }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>MINIMUM LOAN SIZE </label>
+                                        <input name="text" type="text" class="form-control" disabled value="{{ lander.min_loan_size }}">
+                                    </div>
+                                     <div class="form-group">
+                                        <label>MIXIMUM LTV </label>
+                                        <input name="text" type="text" class="form-control" disabled value="{{ lander.max_ltv }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>PROPERTY TYPE </label>
+                                        <input name="text" type="text" class="form-control" disabled value="{{ lander.property_type }}">
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-3 padding-top-25">
+                                   <div class="form-group">
+                                        <label>Email </label>
+                                        <input name="email" type="email" class="form-control" disabled value="{{ lander.user.email }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>ADRESS </label>
+                                        <input name="text" type="text" class="form-control" disabled value="{{ lander.user.address }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>AVAILABLE FUNDS </label>
+                                        <input name="text" type="text" class="form-control" disabled value="{{ lander.available_funds }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>MINIMUM CRADIT </label>
+                                        <input name="text" type="text" class="form-control" disabled value="{{ lander.min_credit }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>MAXIMUM LOAN SIZE </label>
+                                        <input name="text" type="text" class="form-control" disabled value="{{ lander.max_loan_size }}">
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label>MIXIMUM LTC </label>
+                                        <input name="text" type="text" class="form-control" disabled value="{{ lander.max_ltc }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>STATE </label>
+                                        <input name="text" type="text" class="form-control" disabled value="{{ lander.states }}">
+                                    </div>
+                                    <div class="form-group">
+                                    <label for="foreclousure">FORECLOSURE </label>
+                                      {% if  lander.foreclosure %}
+                                    <input type="checkbox" class="form-control"  value="True" disabled checked>
+                                      {% else %}
+                                        <input type="checkbox" class="form-control"  value="True" disabled >
+                                        {% endif %}
+
+                                </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="col-sm-12 col-sm-offset-8">
+                                <br>
+                                <button type="button" class='btn btn-finish btn-primary'      onclick="location.href='{% url 'editprofile' %}'"  > edit Profile </button>
+                                <button type="button" class='btn btn-finish btn-primary'      onclick="location.href='{% url 'editPassword' %}'"  > change Password </button>
+
+                                </br>
+                            </div>
+
+                    </form>
+                     {#        end    show profile     #}
+
+
+                </div>
+            </div><!-- end row -->
+
+                <!---start-  request lobiessss--->
+
+
+
+                <!---start-  request lobiessss--->
+
+
+
+        </div>
+    </div>
+
+
+          <!-- Footer area-->
+
+{% endblock %}

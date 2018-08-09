@@ -1,0 +1,165 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block pagecontent %}
+
+
+
+
+     <!-- End of nav bar -->
+
+        <div class="page-head">
+            <div class="container">
+                <div class="row">
+                    <div class="page-head-content">
+                        <h1 class="page-title">Register account  </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End page header -->
+        <!-- register-area -->
+        <div class="register-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3" >
+                    <div class="box-for overflow">
+                        <div class="col-md-12 col-xs-12 register-blocks">
+                            <h2>Register account : </h2>
+
+                             <form id="loginform" method="POST" class="post-form">
+                                 {% csrf_token %}
+
+{#                               <div class="form-group">#}
+{#                                    <label for="craditrating">UserName</label>#}
+{#                                    <input type="text"  {% if form.username.value != None %}value="{{ form.username.value|stringformat:'s' }}"{% endif %} class="form-control" id="username" placeholder="user name">#}
+{#                                </div>#}
+                              <div class="form-group">
+                                    <label for="username">UserName </label>
+                                    <input type="text" class="form-control" id="username" name="username" onfocus="this.value=''"  required >
+                                    <span id="usernameError" style="color: red"></span>
+                                </div>
+{#                                <div class="form-group">#}
+{#                                    <label for="sscard">First Name</label>#}
+{#                                    <input type="text"  {% if form.first_name.value != None %}value="{{ form.first_name.value|stringformat:'s' }}"{% endif %} class="form-control" id="firstname" placeholder="first  name">#}
+{#                                </div>#}
+{##}
+{#                               <div class="form-group">#}
+{#                                    <label for="sscard">Last Name</label>#}
+{#                                    <input type="text"  {% if form.last_name.value != None %}value="{{ form.last_name.value|stringformat:'s' }}"{% endif %} class="form-control" id="lastname" placeholder="last  name">#}
+{#                                </div>#}
+
+{#                                <div class="form-group">#}
+{#                                    <label for="password">Password</label>#}
+{#                                    <input type="password"  {% if form.password.value != None %}value="{{ form.password.value|stringformat:'s' }}"{% endif %} class="form-control" id="password" placeholder="password">#}
+{#                                </div>#}
+                                <div class="form-group">
+                                    <label for="password">Password </label>
+                                    <input type="password" class="form-control" id="password" name="password" onfocus="this.value=''"  required>
+                                </div>
+
+{#                              <div class="form-group">#}
+{#                                    <label for="username">Name</label>#}
+{#                                    <input type="text"  {% if form.name.value != None %}value="{{ form.name.value|stringformat:'s' }}"{% endif %} class="form-control" id="username" placeholder="enter usernaname">#}
+{#                                </div>#}
+                                <div class="form-group">
+                                    <label for="firstname">First Name </label>
+                                    <input type="text" class="form-control" id='firstname' name="firstname" required>
+                                </div>
+                                 <div class="form-group">
+                                    <label for="lastname">Last Name </label>
+                                    <input type="text" class="form-control" id='lastname' name="lastname" required>
+                                </div>
+{#                                <div class="form-group">#}
+{#                                    <label for="name">Adress</label>#}
+{#                                    <input type="text"  {% if form.address.value != None %}value="{{ form.address.value|stringformat:'s' }}"{% endif %} class="form-control" id="adress" placeholder="enter adress" name="adress">#}
+{#                                </div>#}
+                                 <div class="form-group">
+                                    <label for="address">Address </label>
+                                    <input type="text" class="form-control" id="address" name="address" required>
+                                </div>
+
+
+{#                                <div class="form-group">#}
+{#                                    <label for="adresss">Credit Rating</label>#}
+{#                                    <input type="text"  {% if form.credit_rating.value != None %}value="{{ form.credit_rating.value|stringformat:'s' }}"{% endif %} class="form-control" id="creditrating" placeholder="credit  rating">#}
+{#                                </div>#}
+                                 <div class="form-group">
+                                    <label for="creditrating">Credit Rating </label>
+                                    <input type="text" class="form-control" id="creditrating" name="creditrating" required>
+                                </div>
+
+
+{#                                <div class="form-group">#}
+{#                                    <label for="username">SS card</label>#}
+{#                                    <input type="text"  {% if form.sscard.value != None %}value="{{ form.sscard.value|stringformat:'s' }}"{% endif %} class="form-control" id="sscard" placeholder="sscard">#}
+{#                                </div>#}
+                                 <div class="form-group">
+                                    <label for="sscard">SS card </label>
+                                    <input type="text" class="form-control" id="sscard" name="sscard" required>
+                                </div>
+
+
+
+
+
+
+                       <div class="text-center">
+                            <button id="signup" type="submit" class="save btn btn-default">Signup</button>
+                                  </div>
+                            </form>
+
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+
+            </div>
+        </div>
+
+          <!-- Footer area-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+
+<script>
+    $("#username").change(function () {
+      var username = $(this).val();
+      console.log( $(this).val() );
+      $.ajax({
+        url: '/ajax/validate_username/',
+        data: {
+          'username': username
+        },
+        dataType: 'json',
+        success: function (data) {
+          if (data.is_taken) {
+              $('#usernameError').html("* A user with this username already exists");
+              $("#signup").attr('disabled', true);
+          }
+          else {
+              $('#usernameError').html("ok.");
+              $("#signup").attr('disabled', false);
+           }
+        }
+      });
+
+    });
+  </script>
+{#    <script>#}
+{#$(document).ready(function(){#}
+{#    $("input").change(function(){#}
+{#        alert("The text has been changed.");#}
+{#    });#}
+{#});#}
+{#</script>#}
+
+{% endblock %}
+
+
+

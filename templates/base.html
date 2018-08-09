@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+{% load static %}
+
+<html class="no-js"> <!--<![endif]-->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lander Borrower </title>
+    <meta name="description" content="GARO is a real-estate template">
+    <meta name="author" content="jamshaid">
+    <meta name="keyword" content="html5, css, bootstrap, property, real-estate theme , bootstrap template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Place favicon.ico  the root directory -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="{% static 'assets/css/normalize.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/fontello.css'%}">
+    <link href="{% static 'assets/fonts/icon-7-stroke/css/pe-icon-7-stroke.css'%}" rel="stylesheet">
+    <link href="{% static 'assets/fonts/icon-7-stroke/css/helper.css'%}" rel="stylesheet">
+    <link href="{% static 'assets/css/animate.css'%}" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-select.min.css'%}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/icheck.min_all.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/price-range.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.theme.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.transitions.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/wizard.css'%}">
+</head>
+<body>
+
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+<!-- Body content -->
+
+
+<div class="header-connect">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 col-sm-8  col-xs-12">
+                <div class="header-half header-call">
+                    <p>
+                        <span><i class="pe-7s-call"></i> +923134848144</span>
+                        <span><i class="pe-7s-mail"></i> your@company.com</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-2 col-md-offset-5  col-sm-3 col-sm-offset-1  col-xs-12">
+                <div class="header-half header-social">
+                    <ul class="list-inline">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-vine"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End top header -->
+
+<nav class="navbar navbar-default ">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'assets/img/logo.png'%}" alt=""></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse yamm" id="navigation">
+            <div class="button navbar-right">
+{#                <button class="navbar-btn nav-button wow bounceInRight login" onclick="location.href='{% url 'login' %}'" data-wow-delay="0.4s">Login</button> #}
+           {#     <button class="navbar-btn nav-button wow fadeInRight" onclick="location.href='{% url 'register' %}'" data-wow-delay="0.5s">Register</button>#}
+                <!-- Single button -->
+
+             {% if not user.is_authenticated %}
+                <div class="btn-group">
+                    <button type="button" class="navbar-btn nav-button wow bounceInRight login   btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Register <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'borrower_register' %}">Borrower Register</a></li>
+                        <li><a href="{% url 'lander_register' %}">Lander Register</a></li>
+                    </ul>
+                </div>
+            {% endif %}
+                 {% if not user.is_authenticated %}
+                <button type="button" class="navbar-btn nav-button wow bounceInRight login   btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"   onclick="location.href='{% url 'login' %}'"  > Login </button>
+                 {% endif %}
+                 {% if user.is_authenticated %}
+                      <button type="button" class="navbar-btn nav-button wow bounceInRight login   btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"   onclick="location.href='{% url 'logout' %}'"  > Logout </button>
+                     <button type="button" class="navbar-btn nav-button wow bounceInRight login   btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"    > Welcome {{ user.username }} </button>
+                 {% endif %}
+            </div>
+            <ul class="main-nav nav navbar-nav navbar-right">
+
+
+
+                <li class="wow fadeInDown" data-wow-delay="0.1s"><a class="" href="{% url 'index' %}">Home</a></li>
+
+                <li class="wow fadeInDown" data-wow-delay="0.1s"><a class="" href="{% url 'home' %}">Lobby</a></li>
+                {% if  request.user.is_borrower %}
+                <li class="wow fadeInDown" data-wow-delay="0.1s"><a class="" href="{% url 'submitrequest' %}">loan request</a></li>
+                {% endif %}
+                <li class="wow fadeInDown" data-wow-delay="0.1s"><a class="" href="{% url 'profile' %}">Profile</a></li>
+
+                <li class="wow fadeInDown" data-wow-delay="0.4s"><a href="{% url 'contact' %}">Contact</a></li>
+
+
+
+
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<!-- End of nav bar -->
+
+{% block pagecontent %}
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+<!-- Footer area-->
+<div class="footer-area">
+
+    <div class=" footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 col-sm-6 wow fadeInRight animated">
+                    <div class="single-footer">
+                        <h4>About us </h4>
+                        <div class="footer-title-line"></div>
+
+                        <img src="{% static 'assets/img/logo.png'%}" alt="" class="wow pulse" data-wow-delay="1s">
+                        <p>Lorem ipsum dolor cum necessitatibus su quisquam molestias. Vel unde, blanditiis.</p>
+                        <ul class="footer-adress">
+                            <li><i class="pe-7s-map-marker strong"> </i> 9089 your adress her</li>
+                            <li><i class="pe-7s-mail strong"> </i> email@yourcompany.com</li>
+                            <li><i class="pe-7s-call strong"> </i> +1 908 967 5906</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 wow fadeInRight animated">
+                    <div class="single-footer">
+                        <h4>Quick links </h4>
+                        <div class="footer-title-line"></div>
+                        <ul class="footer-menu">
+                            <li><a href="{% url 'index' %}">Home</a>  </li>
+                            <li><a href="{% url 'home' %}">Loby</a>  </li>
+                            <li><a href="{% url 'submitrequest' %}">Submit Request </a></li>
+                            <li><a href="">Contact us</a></li>
+                            <li><a href="">location</a>  </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 wow fadeInRight animated">
+                    <div class="single-footer news-letter">
+                        <h4>Stay in touch</h4>
+                        <div class="footer-title-line"></div>
+                        <p>Lorem ipsum dolor sit amet, nulla  suscipit similique quisquam molestias. Vel unde, blanditiis.</p>
+
+                        <form>
+                            <div class="input-group">
+                                <input class="form-control" type="text" placeholder="E-mail ... ">
+                                <span class="input-group-btn">
+                                            <button class="btn btn-primary subscribe" type="button"><i class="pe-7s-paper-plane pe-2x"></i></button>
+                                        </span>
+                            </div>
+                            <!-- /input-group -->
+                        </form>
+
+                        <div class="social pull-right">
+                            <ul>
+                                <li><a class="wow fadeInUp animated" href="https://twitter.com/kimarotec"><i class="fa fa-twitter"></i></a></li>
+                                <li><a class="wow fadeInUp animated" href="https://www.facebook.com/kimarotec" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a></li>
+                                <li><a class="wow fadeInUp animated" href="https://plus.google.com/kimarotec" data-wow-delay="0.3s"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a class="wow fadeInUp animated" href="https://instagram.com/kimarotec" data-wow-delay="0.4s"><i class="fa fa-instagram"></i></a></li>
+                                <li><a class="wow fadeInUp animated" href="https://instagram.com/kimarotec" data-wow-delay="0.6s"><i class="fa fa-dribbble"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copy text-center">
+        <div class="container">
+            <div class="row">
+                <div class="pull-left">
+                    <span> (C) <a href="">jimy</a> , All rights reserved   </span>
+                </div>
+                <div class="bottom-menu pull-right">
+                    <ul>
+                        <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.2s">Home</a></li>
+                        <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.3s">Location</a></li>
+                        <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.6s">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="{% static 'assets/js/modernizr-2.6.2.min.js'%}"></script>
+
+<script src="{% static 'assets/js/jquery-1.10.2.min.js'%}"></script>
+<script src="{% static 'bootstrap/js/bootstrap.min.js'%}"></script>
+<script src="{% static 'assets/js/bootstrap-select.min.js'%}"></script>
+<script src="{% static 'assets/js/bootstrap-hover-dropdown.js'%}"></script>
+
+<script src="{% static 'assets/js/easypiechart.min.js'%}"></script>
+<script src="{% static 'assets/js/jquery.easypiechart.min.js'%}"></script>
+
+<script src="{% static 'assets/js/owl.carousel.min.js'%}"></script>
+
+<script src="{% static 'assets/js/wow.js'%}"></script>
+
+<script src="{% static 'assets/js/icheck.min.js'%}"></script>
+<script src="{% static 'assets/js/price-range.js'%}"></script>
+
+<script src="{% static 'assets/js/main.js'%}"></script>
+<script src="{% static 'assets/js/jquery.bootstrap.wizard.js'%}" type="text/javascript"></script>
+<script src="{% static 'assets/js/jquery.validate.min.js'%}"></script>
+<script src="{% static 'assets/js/wizard.js'%}"></script>
+
+ <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+
+<script src="{% static 'assets/js/gmaps.js'%}"></script>
+<script src="{% static 'assets/js/gmaps.init.js'%}"></script>
+{#<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>#}
+{#<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>#}
+</body>
+</html>

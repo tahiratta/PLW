@@ -1,0 +1,487 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block pagecontent %}
+
+
+    <script src="{% static 'assets/js/modernizr-2.6.2.min.js' %}"></script>
+        <script src="{% static 'assets/js/jquery-1.10.2.min.js' %}"></script>
+        <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'assets/js/bootstrap-select.min.js' %}"></script>
+        <script src="{% static 'assets/js/bootstrap-hover-dropdown.js' %}"></script>
+        <script src="{% static 'assets/js/easypiechart.min.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.easypiechart.min.js' %}"></script>
+        <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'assets/js/wow.js' %}"></script>
+        <script src="{% static 'assets/js/icheck.min.js' %}"></script>
+
+        <script src="{% static 'assets/js/price-range.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.bootstrap.wizard.js' %}" type="text/javascript"></script>
+        <script src="{% static 'assets/js/jquery.validate.min.js' %}"></script>
+        <script src="{% static 'assets/js/wizard.js' %}"></script>
+
+        <script src="{% static 'assets/js/main.js' %}"></script>
+
+
+        <div class="page-head">
+            <div class="container">
+                <div class="row">
+                    <div class="page-head-content">
+                        <h1 class="page-title">Submit new loan request</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+ <!-- property area -->
+        <div class="content-area submit-property">&nbsp;
+            <div class="container">
+                <div class="clearfix" >
+                    <div class="wizard-container">
+
+                        <div class="wizard-card ct-wizard-orange" id="wizardProperty">
+                            <form action="" method="">
+                                <div class="wizard-header">
+                                    <h3>
+                                        <b>request</b> loan <br>
+                                        <small>Lorem ipsum dolor sit amet, consectetur adipisicing.</small>
+                                    </h3>
+                                </div>
+
+                                <ul>
+                                    <li><a href="#step1" data-toggle="tab">Step 1 </a></li>
+                                    <li><a href="#step2" data-toggle="tab">Step 2 </a></li>
+                                    <li><a href="#step3" data-toggle="tab">Step 3 </a></li>
+                                    <li><a href="#step4" data-toggle="tab">Finished </a></li>
+                                </ul>
+
+                                <div class="tab-content">
+
+                                    <div class="tab-pane" id="step1">
+                                        <div class="row p-b-15  ">
+                                            <h4 class="info-text"> Let's start with Borrower the basic information (with validation)</h4>
+
+
+
+                                             <div class="col-sm-6  col-sm-offset-3 ">
+                                                <div class="form-group">
+                                                    <label for="property-images">Credit report :  <small>(required)</small></label>
+                                                    <input class="form-control" type="file" id="property-images">
+                                                    <p class="help-block">to upload their Credit report .</p>
+                                                </div>
+
+                                                 <div class="form-group">
+                                                    <label for="property-images">bank statements :  <small>(required)</small></label>
+                                                    <input class="form-control" type="file" id="property-images">
+                                                    <p class="help-block">to upload their bank statement documents .</p>
+                                                </div>
+
+                                                  <div class="form-group">
+                                                    <label for="property-images">tax returns :  <small>(required)</small></label>
+                                                    <input class="form-control" type="file" id="property-images">
+                                                    <p class="help-block">need to upload their tax return documents .</p>
+                                                </div>
+
+                                                 <div class="form-group">
+                                                    <label for="property-images"> ID card :  <small>(required)</small></label>
+                                                    <input class="form-control" type="file" id="property-images">
+                                                    <p class="help-block"> to upload a copy of their Identification card .</p>
+                                                </div>
+
+                                                  <div class="form-group">
+                                                    <label for="property-images"> SSD card :  <small>(required)</small></label>
+                                                    <input class="form-control" type="file" id="property-images">
+                                                    <p class="help-block"> to upload a copy of their social security card .</p>
+                                                </div>
+
+
+                                                  <div class="form-group">
+                                                    <label for="property-images"> Cash Ability  :  <small>(required)</small></label>
+                                                    <input class="form-control" type="file" id="property-images">
+                                                    <p class="help-block"> need to upload a document showing cash they have available to spend on the loan.</p>
+                                                </div>
+
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                    <!--  End step 1 -->
+
+                                    <div class="tab-pane" id="step2">
+                                        <div class="row p-b-15  ">
+                                            <h4 class="info-text">  Borrower the Business Entity  information (with validation)</h4>
+
+
+
+                                             <div class="col-sm-6  col-sm-offset-3 ">
+                                                <div class="form-group">
+                                                    <label for="property-images">Operating Agreement/ Bylaws :  <small>(required)</small></label>
+                                                    <input class="form-control" type="file" id="property-images">
+                                                    <p class="help-block">to upload their Operating Agreement/ Bylaws document .</p>
+                                                </div>
+
+                                                 <div class="form-group">
+                                                    <label for="property-images">Articles of Organization/ Incorporation :  <small>(required)</small></label>
+                                                    <input class="form-control" type="file" id="property-images">
+                                                    <p class="help-block">to upload their Articles of Organization/ Incorporation documents .</p>
+                                                </div>
+
+                                                  <div class="form-group">
+                                                    <label for="property-images">Secretary of State Status :  <small>(required)</small></label>
+                                                    <input class="form-control" type="file" id="property-images">
+                                                    <p class="help-block">need to upload Secretary of State Status documents .</p>
+                                                </div>
+
+                                                 <div class="form-group">
+                                                    <label for="property-images"> Federal EIN :  <small>(required)</small></label>
+                                                    <input class="form-control" type="file" id="property-images">
+                                                    <p class="help-block"> to need to upload their EIN letter from Internal Revenue Service .</p>
+                                                </div>
+
+
+
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                    <!-- End step 2 -->
+
+                                    <div class="tab-pane" id="step3">
+                                        <h4 class="info-text">Subject Property Information </h4>
+                                         <div class="row p-b-15  ">
+
+                                             <div class="col-sm-6  col-sm-offset-3 ">
+                                                <div class="form-group">
+                                                    <label for="property-images">Purchase and Sales Agreement :  <small>(required)</small></label>
+                                                    <input class="form-control" type="file" id="property-images">
+                                                    <p class="help-block">to upload their purchase/sales documents .</p>
+                                                </div>
+
+                                                 <div class="form-group">
+                                                    <label for="property-images">Earnest Money Deposit :  <small>(required)</small></label>
+                                                    <input class="form-control" type="file" id="property-images">
+                                                    <p class="help-block">need to upload a copy of earnest money deposit .</p>
+                                                </div>
+
+                                                  <div class="form-group">
+                                                    <label for="property-images">Market Analysis :  <small>(optional)</small></label>
+                                                    <input class="form-control" type="file" id="property-images">
+                                                    <p class="help-block">they can upload market analysis and comps from realtors .</p>
+                                                </div>
+
+                                                 <div class="form-group">
+                                                    <label for="property-images"> Contractors Bid/Scope of Work and License and Insurance  :  <small>(if applicable)</small></label>
+                                                    <input class="form-control" type="file" id="property-images">
+                                                    <p class="help-block"> upload the General Contractors scope of work/bid and license and insurance documents.</p>
+                                                </div>
+
+                                                  <div class="form-group">
+                                                    <label for="property-images"> Rent Rolls  :  <small>(if applicable)</small></label>
+                                                    <input class="form-control" type="file" id="property-images">
+                                                    <p class="help-block"> need to upload rent roll excel spreadsheet with bank deposits .</p>
+                                                </div>
+
+
+
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                    <!--  End step 3 -->
+
+
+                                    <div class="tab-pane" id="step4">
+                                        <h4 class="info-text"> Finished and submit </h4>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="">
+                                                    <p>
+                                                        <!-- <label><strong>Terms and Conditions</strong></label> -->
+                                                        <!-- Button trigger modal -->
+                                                        <a href="#" data-toggle="modal" data-target="#exampleModal">
+                                                          Terms and Conditions
+                                                        </a>
+
+                                                        By accessing or using  PRIVATE LOAN WAREHOUSE services, such as
+                                                        posting your property documents with your personal
+                                                        information on our website you agree to the
+                                                        collection, use and disclosure of your personal information
+                                                        in the legal proper manner
+                                                    </p>
+
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" /> <strong>Accept termes and conditions.</strong>
+                                                        </label>
+                                                    </div>
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                      <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                          <div class="modal-header">
+                                                            <h4 class="modal-title" id="exampleModalLabel"><b>Terms and Conditions</b></h4>
+                                                            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                              <span aria-hidden="true">&times;</span>
+                                                            </button> -->
+                                                          </div>
+                                                          <div class="modal-body">
+                                                            <h6 style="text-align: center;">Terms of Use</h6>
+                                                            <p>Welcome to PrivateLoanWareHouse. PrivateLoanWareHouse LLC Idaho ("PrivateLoanWareHouse," "we," or "us") provides the web site at www.PrivateLoanWareHouse.com, including any subdomain thereof (the "Site", and together with the PrivateLoanWareHouse service and network, including any new features and applications, the “Service”), you signify that you have read, understand and agree to be bound by these terms of use (as they may be amended from time to time, the "Terms of Use"), regardless of whether you have created a borrower, investor, or other account on the Service, or whether you have applied for our products or services. For purposes of these Terms of Use, the term “you” includes you and any of your agents (such as a mortgage broker using the Service and acting on your behalf), and any principal (such as an LLC or other entity) on whose behalf you are acting when accessing the Site. For the avoidance of doubt, if you are accessing the Service or applying for our products or services on behalf on an LLC, corporation, partnership, trust, or other person or entity, you represent that you have the authority to agree to our Terms of Service on behalf of the entity and that your use of the Site shall constitute the person or entity’s agreement. The term “User” means any individual, including you, as well as any business entity, who accesses or uses the Site themselves or through an agent. We reserve the right, at our sole discretion, to change or modify portions of these Terms of Use at any time. If we do this, we will post the changes on this page and will indicate at the top of this page the date these terms were last revised. We will also notify you, either through the Service user interface, in an email notification or through other reasonable means. Any such changes will become effective no earlier than fourteen (14) days after they are posted, except that changes addressing new functions of the Service or changes made for legal reasons will be effective immediately. Your continued use of the Service after the date any such changes become effective constitutes your acceptance of the new Terms of Use.
+
+In addition to these Terms of Use, you may enter into other agreements with us or others that will govern your use of the Service or related services offered by us or others. If there is any contradiction between these Terms of Use and another written agreement you enter into applicable to specific aspects of the Service, the other written agreement shall take precedence in relation to the specific aspects of the Service to which it applies.
+
+In addition, when using certain services, you will be subject to any additional terms applicable to such services that may be posted on the Service from time to time, including, without limitations, the Privacy Policy and the E-Sign Consent Agreement. All such terms are hereby incorporated by reference into these Terms of Use.</p>
+
+<h6 style="text-align: center;">Changes to Terms of Use</h6>
+<p>We may make changes to these Terms of Use from time to time. If we do this, we will post the changed Terms of Use on the Service for your review. You understand and agree that your continued use of the Service after we have made any such changes constitutes your acceptance of the new Terms of Use.</p>
+
+<h6 style="text-align: center;">Investor Members: Securities Matters</h6>
+<p>Notwithstanding anything to the contrary in these Terms of Use, in no event shall anything in these Terms of Use be deemed to be a waiver, and we will not assert there has been a waiver, that would not be permissible under Section 14 of the Securities Act of 1933, Section 29(a) of the Securities Exchange Act of 1934, or any other applicable provision of federal and state securities laws.</p>
+
+<h6 style="text-align: center;">Eligibility</h6>
+<p>The Service is intended solely for Users who, if they are a natural person, are eighteen (18) years of age or older, and any registration by, use of or access to the Service by anyone under 18 is unauthorized, unlicensed and in violation of these Terms of Use.By using the Service, you represent and warrant that you are 18 or older and that you agree to abide by all of the terms and conditions of these Terms of Use. If you violate any of these Terms of Use, or otherwise violate an agreement between you and us, or for any other reason, we may terminate your account, delete your profile and any content or information that you have posted on the Service, and/or prohibit you from using or accessing the Service (or any portion, aspect or feature of the Service), at any time in our sole discretion, with or without notice, including without limitation if we believe that you are under 18. You agree that we will not be liable to you or any third party for any termination of your account.</p>
+
+<h6 style="text-align: center;">Registration Data: Account Security</h6>
+<p>You may be required to register with us in order to access and use certain features of the Service. In consideration of your use of the Service, you agree to (a) provide accurate, current and complete information as may be prompted by any registration forms on the Site ("Registration Data"); (b) maintain the security of your password and identification; (c) maintain and promptly update the Registration Data, and any other information you provide to us, to keep it accurate, current and complete; and (d) be fully responsible for all use of your account and for any actions that take place using your account. You are responsible for maintaining the confidentiality of your password and account, if any, and are fully responsible for any and all activities that occur under your password or account.
+
+You agree to (i) immediately notify us of any unauthorized use of your password or account or any other breach of security and (ii) ensure that you exit from your account at the end of each session when accessing the Service. You agree not to hold PrivateLoanWareHouse liable for any loss or damage arising from your failure to comply with this Section.</p>
+
+<h6 style="text-align: center;">Proprietary Rights in Service Content and Software; Limited License</h6>
+<p>All content on the Service, including but not limited to designs, text, graphics, pictures, video, information, software, music, sound and other files, and their selection and arrangement (the "Service Content"), are the proprietary property of PrivateLoanWareHouse with all rights reserved. No Service Content may be modified, copied, distributed, framed, reproduced, republished, downloaded, displayed, posted, transmitted, or sold in any form or by any means, in whole or in part, without our prior written permission, except as provided in the following sentence and except that the foregoing does not apply to your own User Content (as defined below) that you legally post on the Site. Provided that you are eligible for use of the Site, and subject to the this Terms of Use, you are granted a limited license to access and use the Site and to download or print a copy of any portion of the Service Content solely for your use and not for distribution, provided that you keep all copyright or other proprietary notices intact. Except for your own User Content (as defined below), you may not republish Service Content on any Internet, Intranet or Extranet site or incorporate the information in any other database or compilation, and any other use of the Service Content is strictly prohibited. In connection with your use of the Service, you will not engage in or use any data mining, robots, scraping or similar data gathering or extraction methods. If you are blocked by PrivateLoanWareHouse from accessing the Service (including by blocking your IP address), you agree not to implement any measures to circumvent such blocking (e.g., by masking your IP address or using a proxy IP address).
+
+The technology and software underlying the Service or distributed in connection therewith are the property of PrivateLoanWareHouse, our affiliates and our partners (the “Software”). You agree not to copy, modify, create a derivative work of, reverse engineer, reverse assemble or otherwise attempt to discover any source code, sell, assign, sublicense, or otherwise transfer any right in the Software. Any rights not expressly granted herein are reserved by PrivateLoanWareHouse.
+
+Any use of the Service or the Service Content other than as specifically authorized herein, without our prior written permission, is strictly prohibited and will terminate the license granted herein. Such unauthorized use may also violate applicable laws including without limitation copyright and trademark laws and applicable communications regulations and statutes. Unless explicitly stated herein, nothing in these Terms of Use shall be construed as conferring any license to intellectual property rights, whether by estoppel, implication or otherwise. This license is revocable by us at any time without notice and with or without cause.</p>
+
+<h6 style="text-align: center;">Trademark Rights</h6>
+<p>PrivateLoanWareHouse and other graphics, logos, designs, page headers, button icons, scripts and service names are registered trademarks, trademarks or trade dress of PrivateLoanWareHouse in the U.S. and/or other countries. Our trademarks and trade dress may not be used, including as part of trademarks and/or as part of domain names, in connection with any product or service in any manner that is likely to cause confusion and may not be copied, imitated, or used, in whole or in part, without our prior written permission.</p>
+
+<h6 style="text-align: center;">User Representations</h6>
+<p>You represent, warrant and agree that no materials of any kind submitted through your account or otherwise posted or shared by you through the Service will violate or infringe upon the rights of any third party, including copyright, trademark, privacy, publicity or other personal or proprietary rights; or contain libelous, defamatory or otherwise unlawful material. You further agree not to harvest or collect email addresses or other contact information of other Users of the Service by electronic or other means for any purpose. Additionally, you agree not to use automated scripts to collect information from the Service for any purpose. You further agree that you may not use the Service in any unlawful manner or in any other manner that could damage, disable, overburden or impair the Service.In addition, you agree not to use the Service to:
+
+upload, post, transmit, share, store or otherwise make available any content that we deem to be harmful, threatening, unlawful, defamatory, infringing, abusive, inflammatory, harassing, vulgar, obscene, fraudulent, invasive of privacy or publicity rights, hateful, or racially, ethnically or otherwise objectionable;
+
+interfere with or disrupt the Service or servers or network connected to the Service, or disobey any requirements, procedures, policies or regulations of networks connected to the Service;
+
+register for more than one account, register for an account on behalf of an individual other than yourself, or register for an account on behalf of any group or entity unless you are an authorized agent of that business or entity with authority to register for an account on its behalf;
+
+impersonate any person or entity, or falsely state or otherwise misrepresent yourself, your age or your affiliation with any person or entity;
+
+upload, post, transmit, share or otherwise make available any unsolicited or unauthorized advertising, solicitations, promotional materials, "junk mail," "spam," "chain letters," "pyramid schemes," “contests,” “sweepstakes,” or any other form of solicitation;
+
+upload, post, transmit, share, store or otherwise make publicly available on the Service any private information of any third party, including, without limitation, addresses, phone numbers, email addresses, Social Security numbers and credit card numbers;
+
+access personally identifying information of other Users without that User’s authorization;
+
+solicit personal information from anyone under 18 or solicit passwords or personally identifying information for commercial or unlawful purposes;
+
+upload, post, transmit, share or otherwise make available any material that contains software viruses or any other computer code, files or programs designed to interrupt, destroy or limit the functionality of any computer software or hardware or telecommunications equipment;
+
+intimidate or harass other Users;
+
+upload, post, transmit, share, store or otherwise make available content that would constitute, encourage or provide instructions for a criminal offense, violate the rights of any party, or that would otherwise create liability or violate any local, state, national or international law, or any regulations having the force of law;
+
+harvest or collect email addresses or other contact information of other Users from the Service by electronic or other means;
+
+advertise or offer to sell or buy any goods or services for any business purpose that is not specifically authorized;
+
+further or promote any criminal activity or enterprise or provide instructional information about illegal activities;
+
+use or attempt to use another's account, service or system without our written authorization, or create a false identity on the Service;
+
+upload, post, transmit, share, store or otherwise make available content that, in our sole judgment, is objectionable or which restricts or inhibits any other person from using or enjoying the Site, or which may expose PrivateLoanWareHouse or its Users to any harm or liability of any type; or obtain or attempt to access or otherwise obtain any materials or information through any means not intentionally made available or provided for through the Service.
+
+use an account opened in the name of a business or entity for the benefit of a different person, business or entity;
+
+use an account or the Service for any unlawful purpose; or
+
+represent that you are affiliated with the PrivateLoanWareHouse in any way without our prior written consent.</p>
+
+<h6 style="text-align: center;">User Content Posted on the Service</h6>
+<p>You are solely responsible for the photos, profiles, messages, notes, text, information, contact information for you or others or other content that you upload, publish, provide or display (hereinafter, "post") on or through the Service, or transmit to or share with other Users (collectively the "User Content"). You understand and agree that PrivateLoanWareHouse may, but is not obligated to, review and delete or remove (without notice) any User Content in its sole discretion, including without limitation, User Content that in our sole judgment violates these Terms of Use, might be offensive or illegal, or might violate the rights of, harm, or threaten the safety of, Users or others.
+
+By posting User Content to any part of the Service, you automatically grant, and you represent and warrant that you have the right to grant, to PrivateLoanWareHouse an irrevocable, perpetual, non-exclusive, transferable, fully paid, worldwide license (with the right to sublicense) to use, copy, publicly perform, publicly display, reformat, translate, excerpt (in whole or in part) and distribute such User Content for any purpose, to prepare derivative works of, or incorporate into other works, such User Content, and to grant and authorize sublicenses of the foregoing. You may remove your User Content from the Service at any time. If you choose to remove your User Content, the license granted above will not expire.
+
+Some Users may be authorized to review personal information (including credit data) and property data posted by other Users on the Service. If you have such authorization to review personal information of other Users, you are not authorized to disclose or otherwise use such information for any purpose other than assessing the creditworthiness of other Users and potential loans.
+
+You acknowledge and agree that we may preserve content and may also disclose content if required to do so by law or in the good faith belief that such preservation or disclosure is reasonably necessary to: (a) comply with legal process, applicable laws or governmental requests; (b) enforce these Terms of Use; (c) respond to claims that any content violates the rights of third parties; or (d) protect the rights, property, or personal safety of PrivateLoanWareHouse, its Users or the public. You understand that the technical processing and transmission of the Service, including your content, may involve transmissions over various networks and changes to conform and adapt to technical requirements of connecting networks or devices.</p>
+
+<h6 style="text-align: center;">Copyright Complaints</h6>
+<p>If you believe that any material on the Site infringes upon any copyright which you own or control, you may send a written notification of such infringement to our Designated Agent as set forth below:
+
+TBD
+
+To meet the notice restrictions under the Digital Millennium Copyright Act, the notification must be a written communication that includes the following:
+
+A physical or electronic signature of a person authorized to act on behalf of the owner of an exclusive right that is allegedly infringed;
+
+Identification of the copyrighted work claimed to have been infringed, or, if multiple copyrighted works at a single online site are covered by a single notification, a representative list of such works at that site;
+
+Identification of the material that is claimed to be infringing or to be the subject of infringing activity and that is to be removed or access to which is to be disabled, and information reasonably sufficient to permit us to locate the material;
+
+Information reasonably sufficient to permit us to contact the complaining party, such as an address, telephone number and, if available, an electronic mail address at which the complaining party may be contacted;
+
+A statement that the complaining party has a good-faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent or the law; and
+
+A statement that the information in the notification is accurate, and under penalty of perjury, that the complaining party is authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.</p>
+
+<h6 style="text-align: center;">Repeat Infringer Policy</h6>
+<p>In accordance with the Digital Millennium Copyright Act (DMCA) and other applicable law, PrivateLoanWareHouse has adopted a policy of terminating, in appropriate circumstances and at our sole discretion, the memberships or accounts of Users who are deemed to be repeat infringers. We may also at our sole discretion limit access to the Service and/or terminate the accounts/memberships of any Users who infringe any intellectual property rights of others, whether or not there is any repeat infringement.</p>
+
+<h6 style="text-align: center;">Third Party Content, Services, and Links to Other Internet Sites</h6>
+<p>Our Service may contain links to other websites, merchandise, and services provided, owned or operated by third parties (“Third Party Services”); these links do not imply our endorsement or approval of Third Party Services or any related material. The Third Party Services are not under our control and we are not responsible for the availability, content, products, services, advertising, or other materials available on the Third Party Services. The privacy policies of Third Party Services may provide less security than our web sites so we strongly encourage you to read the third party's privacy policy before sharing any information with that third party. All matters concerning Third Party Services are solely between you and the third party. We make no warranties or representations whatsoever with regard to any Third Party Service and we are not responsible or liable to you for any damages, losses, or injuries of any kind arising out of your use of any Third Party Service.</p>
+
+<h6 style="text-align: center;">Consent to Electronic Transactions and Disclosures</h6>
+<p>Because PrivateLoanWareHouse operates only on the Internet, you must consent to conduct business with us and receive disclosures electronically. You agree to receive electronically all documents, communications, notices, contracts, and agreements, including any IRS Form 1099, related to (i) any loans you may request or receive, (ii) your registration as a borrower or investor on our Site, (iii) any loans you may receive from us, (iv) your use of this Service, or (v) the servicing of your loan, (each, a "Disclosure").. The term “IRS Form 1099” refers to any Form 1099 or other Form, Schedule or information statement, including corrections of such documents, required to be provided pursuant to U.S. Internal Revenue Service rules and regulations and that may be provided electronically. The decision to do business with us electronically is yours. This document informs you of your rights concerning any Disclosures. Before you decide to do business electronically with us, you should consider whether you have the required hardware and software capabilities described below.</p>
+
+<h6 style="text-align: center;">Electronic Communications</h6>
+<p>Any Disclosures will be provided to you electronically through PrivateLoanWareHouse.com either through the Service or via electronic mail to the email address you provided. If you require paper copies of such Disclosures, you may write to us at the mailing address provided below and a paper copy will be sent to you. If you do not consent to receive an IRS Form 1099 electronically, a paper copy of any IRS Form 1099 required to be delivered to you at no cost after the effective time of your failure to consent or revocation of consent will be sent to you. However, a fee may be charged for any additional or replacement copies of such IRS Form 1099. A request for a paper copy of any Disclosure will not be considered a withdrawal of your consent to receive Disclosures electronically. Any IRS 1099 Forms provided electronically will remain accessible through at least October 15 of the year in which such IRS Form 1099 is made available; after that time the IRS Form 1099 may no longer be accessible electronically. We may discontinue electronic provision of Disclosures at any time in our sole discretion.</p>
+
+<h6 style="text-align: center;">Scope of Consent</h6>
+<p>Your consent to receive Disclosures and transact business electronically, and our agreement to do so, applies to any transactions to which such Disclosures relate, whether between you (or your agents) and us. Your consent will remain in effect for so long as you are a User and, if you are no longer a User, will continue until such a time as all Disclosures relevant to transactions that occurred while you were a User have been made.</p>
+
+<h6 style="text-align: center;">Hardware and Software Requirements</h6>
+<p>In order to access and retain Disclosures electronically, you will need: a computer with any of the following operating systems: Windows XP or higher, OS X (Apple Macintosh) or higher; an Internet connection with an internet browser that is compatible with and supported by your operating system (i.e. Internet Explorer 10 or higher, Firefox 31.2 or higher, Google Chrome 38 or higher, or Safari 6.2 or higher); Software that accurately reads and displays .pdf files (such as Adobe Reader 8.0 or higher); a printer and/or storage device if you wish to print or retain any electronic documents.</p>
+
+<h6 style="text-align: center;">Additional Mobile Technology Requirements</h6>
+<p>If you are accessing the Service and the Disclosures electronically via a mobile device (such as a smart phone, tablet, and the like), in addition to the above restrictions you must make sure that you have software on your mobile device that allows you to print and save the Disclosures presented to you during the application process. These applications can be found for most mobile devices in the device's respective "app store". If you do not have these capabilities on your mobile device, please access the Service through a device that provides these capabilities.</p>
+
+<h6 style="text-align: center;">Withdrawing Consent</h6>
+<p>You may withdraw your consent to receive Disclosures electronically by contacting us at the address below. However, once you have withdrawn your consent you will not be able to submit loan requests on our Service. If you have a pending loan request on our Service when you withdraw your consent to receive Disclosures electronically, we will terminate your request and remove it from our system. If you have already received a loan, all previously agreed to terms and conditions will remain in effect, and we will send Disclosures to your verified home address provided during registration. If you are an investor member on the Service and you withdraw your consent to receive Disclosures electronically, you may continue to contribute funds to requests on the Service. If you have already purchased one or more loans, all previously agreed to terms and conditions will remain in effect, and we will send Disclosures to your verified home address provided during registration.
+
+If you withdraw your consent to receive IRS Forms 1099 electronically, we will confirm your withdrawal and its effective date in writing by email. Such withdrawal will take effect for the calendar year in which it is made so long as such withdrawal is made before November 1 of such calendar year.</p>
+
+<h6 style="text-align: center;">How to Contact Us regarding Electronic Disclosures</h6>
+<p>You can contact us via email at support@PrivateLoanWareHouse.com or by calling Member Support at 208 518 8152 . You may also reach us in writing to us at the following address: PrivateLoanWareHouse LLC.  1516 Sherman Ave. #8Coeur D Alene ID 83814.
+
+You will keep us informed of any change in your email or home mailing address so that you can continue to receive all Disclosures in a timely fashion. If your registered email address changes, you must notify us of the change by sending an email to support@PrivateLoanWareHouse.com or calling 1208 518 8152 . You also agree to update your registered residence address and telephone number on the Site if they change.
+
+You will print a copy of these Terms of Use for your records and you agree and acknowledge that you can access, receive and retain all Disclosures electronically sent via email or posted on the Service.</p>
+
+<h6 style="text-align: center;">Special Notice for International Use; Export Controls</h6>
+<p>Software (defined above) available in connection with the Service and the transmission of applicable data, if any, is subject to United States export controls. No Software may be downloaded from the Service or otherwise exported or re-exported in violation of U.S.export laws. Downloading or using the Software is at your sole risk. Recognizing the global nature of the Internet, you agree to comply with all local rules and laws regarding your use of the Service, including as it concerns online conduct and acceptable content.</p>
+
+<h6 style="text-align: center;">Cellular Phone Contact Policy</h6>
+<p>By providing us with a telephone number for a mobile device, including a number that you later convert to a mobile device number, you are expressly consenting to receiving communications—including but not limited to prerecorded or artificial voice message calls, text messages, and calls made by an automatic telephone dialing system—from us and our affiliates and agents at that number, about any product or services offered by PrivateLoanWareHouse. This express consent applies to each such telephone number that you provide to us now or in the future. Calls and messages may incur access fees from your mobile services provider. You understand that you need not provide this consent as a condition of obtaining goods or services from PrivateLoanWareHouse, and that you may decline to provide or revoke your consent at any time by emailing support@PrivateLoanWareHouse.com or by any other method that reasonably ensures we receive your revocation.</p>
+
+<h6 style="text-align: center;">Monitoring and Recording Communications</h6>
+<p>By providing us with a telephone number for a mobile device, including a number that you later convert to a mobile device number, you are expressly consenting to receiving communications—including but not limited to prerecorded or artificial voice message calls, text messages, and calls made by an automatic telephone dialing system—from us and our affiliates and agents at that number, about any product or services offered by PrivateLoanWareHouse. This express consent applies to each such telephone number that you provide to us now or in the future. Calls and messages may incur access fees from your mobile services provider. You understand that you need not provide this consent as a condition of obtaining goods or services from PrivateLoanWareHouse, and that you may revoke your consent at any time.</p>
+
+<h6 style="text-align: center;">Promotions</h6>
+<p>From time to time, we may offer promotions or special opportunities (“Promotions”) on our Site. The Promotions may come in the form of incentives, such as, without limitation, credits or fee discounts. We may set or change the incentive types, amounts, terms, restrictions, and qualification requirements for any Promotion in our sole discretion and we reserve the right to cancel any active Promotion at any time. We also reserve the right to withhold or deduct credits or benefits obtained through a Promotion in the event that we determine or believe that the redemption of the promotion or receipt of the credit or benefit was in error, fraudulent, illegal, or in violation of the applicable promotion terms or this Terms of Use.
+
+As part of a Promotion, we may offer you incentives to refer third parties, including real estate agents, to the PrivateLoanWareHouse community (a “Referral Program”). When you enter such a Referral Program or respond to such opportunity, we may require the submission of your name, e-mail address, postal address and other personally identifiable information. Any information collected by PrivateLoanWareHouse under a Referral Program shall be governed by PrivateLoanWareHouse’s Privacy Policy. We will use this personally identifiable information for purposes of managing the Promotion or opportunity, and may share this information with our affiliates and other service providers. Your participation in such a Referral Program is subject to these Terms of Use, including the Referral Program Rules, along with the terms and conditions specific to the Referral Program.</p>
+
+<h4 style="text-align: center;"><b>Referral Program Rules</b></h4><br>
+<h6 style="text-align: center;">Program Overview</h6>
+<p>Referral Programs offered by PrivateLoanWareHouse shall provide Users who are interested in referring their friends, real estate agents or other third parties (“Referrers”) the opportunity to refer eligible individuals to join the PrivateLoanWareHouse community. These Referral Program Rules apply to both referrers and referred Users, so please read carefully to understand your respective rights and obligations.</p>
+
+<h6 style="text-align: center;">Referrer and Referred Eligibility</h6>
+<p>To be eligible to participate in a Referral Program as a referrer, you must meet the Eligibility requirements in our Terms of Use. In addition, any referred real estate agent or third party must meet the Eligibility requirements of our Terms of Use as well. Referred real estate agents are also required to have all the legally necessary licenses, registrations, approvals or exemptions for their practice in order to be eligible to participate in a Referral Program. If you violate the these Terms of Use, including the Referral Program Rules, or the specific terms and conditions of a Referral Program, PrivateLoanWareHouse may suspend or terminate your ability to participate in such a Referral Program under any or all of your accounts.</p>
+
+<h6 style="text-align: center;">How to Refer New Users</h6>
+<p>You may invite individuals to become new Users directly through the applicable portion of the Site by entering or providing PrivateLoanWareHouse with your invitee’s contact information (any such information collected by PrivateLoanWareHouse shall be governed by PrivateLoanWareHouse’s Privacy Policy). Inviting an individual through our Site may generate an automatic invitation text (SMS) or email (the “Invitation”) to the person which may be sent via email, through your phone number or a number controlled by PrivateLoanWareHouse. Referrers or the referred parties may receive promotional credits, fee discounts or other forms of incentives for participating in a Referral Program, subject to the specific terms and conditions of such Referral Program. You represent that you have the necessary consent from your invitee to send them the Invitation.</p>
+
+<h6 style="text-align: center;">Referral Rewards</h6>
+<p>You may be eligible to earn a referral incentive (“Referral Reward”) for each referred party, subject to terms in these Terms of Use, including the Referral Program Rules, and the terms and conditions of the specific Referral Program. You and the referred individual must satisfy these Terms of Use and the applicable terms and conditions for the Referral Program (“Reward Criteria”) for you to qualify for the Referral Award. The Referral Rewards are set by PrivateLoanWareHouse in its sole discretion and are subject to change at any time. The Reward Criteria may vary by market or within a particular market. PrivateLoanWareHouse, at its sole discretion, may make available certain Promotions with different Reward Criteria or Referral Rewards to other Users or prospective Users. These promotions, unless offered to you, shall have no bearing whatsoever on your Agreement or relationship with PrivateLoanWareHouse.
+
+Only one person can earn a Referral Reward for a single referral. In the event that multiple persons claim credit for a particular referral, PrivateLoanWareHouse has full discretion to determine which person earned such referral according to PrivateLoanWareHouse’s systems.</p>
+
+<h6 style="text-align: center;">Reservation of rights</h6>
+<p>PrivateLoanWareHouse reserves the right to withhold or deduct Referral Rewards obtained through a Referral Program in the event that Lending determines or believes that the receipt of the Referral Reward was in error, fraudulent, illegal, or in violation of these Terms of Use, including the Referral Program Rules, or any other applicable agreement between you and PrivateLoanWareHouse.</p>
+
+<h6 style="text-align: center;">Commercial Use</h6>
+<p>Unless otherwise expressly authorized herein or in the Service, you agree not to display, distribute, license, perform, publish, reproduce, duplicate, copy, create derivative works from, modify, sell, resell, exploit, transfer or upload for any commercial purposes, any portion of the Service, use of the Service, or access to the Service.</p>
+
+<h6 style="text-align: center;">User Disputes</h6>
+<p>You are solely responsible for your interactions with other Users. We reserve the right, but have no obligation, to monitor disputes between you and other Users.</p>
+
+<h6 style="text-align: center;">Disclaimers</h6>
+<p>YOUR USE OF THE SERVICE IS AT YOUR SOLE RISK. THE SERVICE IS PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS. PrivateLoanWareHouse EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT.
+
+PrivateLoanWareHouse does not guarantee the accuracy of any User Content or Third Party Services. Although we provide rules for User conduct and postings, we do not control and are not responsible for what Users post on the Service and are not responsible for any offensive, inappropriate, obscene, unlawful or otherwise objectionable content you may encounter on the Service or in connection with any User Content or Third Party Services. PrivateLoanWareHouse is not responsible for the conduct, whether online or offline, of any User of the Service.We cannot guarantee and does not promise any specific results from use of the Service to obtain a loan.
+
+The Service may be temporarily unavailable from time to time for maintenance or other reasons. PrivateLoanWareHouse assumes no responsibility for any error, omission, interruption, deletion, defect, delay in operation or transmission, communications line failure, theft or destruction or unauthorized access to, or alteration of, User communications. PrivateLoanWareHouse is not responsible for any problems or technical malfunction of any telephone network or lines, computer online systems, servers or providers, computer equipment, software, failure of email or players on account of technical problems or traffic congestion on the Internet or on the Service or combination thereof, including injury or damage to Users or to any other person's computer related to or resulting from participating or downloading materials in connection with the Web and/or in connection with the Service. Under no circumstances will PrivateLoanWareHouse be responsible for any loss or damage, including any loss or damage to any User Content or personal injury or death, resulting from anyone's use of the Service, any User Content or content from Third Party Services posted on or through the Service or transmitted to Users, or any interactions between Users of the Service, whether online or offline.
+
+PrivateLoanWareHouse reserves the right to change any and all content contained in the Service at any time without notice including, without limitation, permanently discontinuing any portion of the Service. Reference to any products, services, processes or other information, by trade name, trademark, manufacturer, supplier or otherwise does not constitute or imply endorsement, sponsorship or recommendation thereof, or any affiliation therewith, by PrivateLoanWareHouse.</p>
+
+<h6 style="text-align: center;">Limitation on Liability</h6>
+<p>EXCEPT IN JURISDICTIONS WHERE SUCH PROVISIONS ARE RESTRICTED AND EXCEPT AS PROVIDED ABOVE IN THE PARAGRAPH TITLED, "INVESTOR MEMBERS: SECURITIES MATTERS", IN NO EVENT WILL PrivateLoanWareHouse OR ITS DIRECTORS, EMPLOYEES OR AGENTS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL OR PUNITIVE DAMAGES, INCLUDING FOR ANY LOST PROFITS OR LOST DATA ARISING FROM YOUR USE OF THE SITE OR THE SERVICE OR ANY OF THE SERVICE CONTENT OR OTHER MATERIALS ON OR ACCESSED THROUGH THE SITE, EVEN IF PrivateLoanWareHouse IS AWARE OR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+NOTWITHSTANDING ANYTHING TO THE CONTRARY CONTAINED HEREIN EXCEPT AS PROVIDED ABOVE IN THE PARAGRAPH TITLED, "INVESTOR MEMBERS: SECURITIES MATTERS", TO THE EXTENT PERMITTED BY APPLICABLE LAW, PrivateLoanWareHouse'S LIABILITY TO YOU FOR ANY CAUSE WHATSOEVER, AND REGARDLESS OF THE FORM OF THE ACTION, WILL AT ALL TIMES BE LIMITED TO THE AMOUNT PAID, IF ANY, BY YOU TO PrivateLoanWareHouse FOR THE SERVICE DURING THE TERM OF MEMBERSHIP. IN NO CASE, EXCEPT AS PROVIDED ABOVE IN THE PARAGRAPH TITLED, "INVESTOR MEMBERS: SECURITIES MATTERS", WILL PrivateLoanWareHouse'S LIABILITY TO YOU EXCEED $1000.
+
+IN ADDITION TO THE SPECIFIC SECURITIES LAWS PROVISIONS DESCRIBED ABOVE IN THE PARAGRAPH TITLED, "INVESTOR MEMBERS: SECURITIES MATTERS", CERTAIN FEDERAL AND STATE LAWS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES OR LIMITATIONS ON IMPLIED WARRANTIES. IF THESE LAWS APPLY TO YOU, SOME OR ALL OF THE ABOVE DISCLAIMERS, EXCLUSIONS OR LIMITATIONS MAY NOT APPLY TO YOU, AND YOU MAY HAVE ADDITIONAL RIGHTS.</p>
+
+<h6 style="text-align: center;">Governing Law; Venue and Jurisdiction</h6>
+<p>By visiting or using the Site and/or the Service, you agree that the laws of the State of Delaware, without regard to any principles of conflict of laws, will govern these Terms of Use. You and PrivateLoanWareHouse agree to submit to the personal and exclusive jurisdiction and venue of the state and federal courts located within Kootenai County Idaho.</p>
+
+<h6 style="text-align: center;">Arbitration, Waiver of Jury Trial and Class Action Rights</h6>
+<p>At our or your election, all disputes, claims, or controversies (“Claims”) arising out of or relating the following shall be resolved by final and binding arbitration to be conducted before the American Arbitration Association (“AAA”), or its successor: (a) Claims arising out of or relating to any aspect of the relationship between you and us, including but not limited to your use of the Site or the Service, whether based in contract, tort, statute, fraud, misrepresentation or any other legal theory; (b) Claims that arose before this or any prior agreement (including, but not limited to, claims relating to advertising); (c) Claims that are currently the subject of purported class action litigation in which you are not a member of a certified class; and (d) Claims that may arise after the termination of these Terms of Use.
+
+Unless otherwise agreed by the parties, arbitration will be held in Coeur D Alene, Idaho before a single arbitrator mutually agreed upon by the parties, or if the parties cannot mutually agree, a single arbitrator appointed by AAA, and will be conducted in accordance with the current rules and regulations promulgated by AAA unless specifically modified in the Terms of Service. The arbitration must commence within forty-five (45) days of the date on which a written demand for arbitration is filed by either party. The arbitrator’s reasoned decision and award will be made and delivered within sixty (60) days of the conclusion of the arbitration and within six (6) months of the selection of the arbitrator. The arbitrator will not have the power to award damages in excess of the limitation on actual compensatory, direct damages set forth in these Terms of Use and may not multiply actual damages or award punitive damages or any other damages that are specifically excluded under these Terms of Use, and each party hereby irrevocably waives any claim to such damages. The arbitrator may, in his or her discretion, assess costs and expenses (including the reasonable legal fees and expenses of the prevailing party) against any party to a proceeding. Any party refusing to comply with an order of the arbitrators will be liable for costs and expenses, including attorneys’ fees, incurred by the other party in enforcing the award. Notwithstanding the foregoing, in the case of temporary or preliminary injunctive relief, any party may proceed in court without prior arbitration for the purpose of avoiding immediate and irreparable harm. The provisions of this arbitration section will be enforceable in any court of competent jurisdiction. The arbitrator may award declaratory or injunctive relief only in favor of the individual party seeking relief and only to the extent necessary to provide relief warranted by that party's individual claim.
+
+YOU AND PrivateLoanWareHouse AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING. Further, unless both you and PrivateLoanWareHouse agree otherwise in writing, the arbitrator may not consolidate more than one person's claims, and may not otherwise preside over any form of a representative or class proceeding.
+
+In addition, you agree that, by entering into these Terms of Use, you and PrivateLoanWareHouse are each waiving the right to a trial by jury or to participate in a class action. These Terms of Use evidence a transaction in interstate commerce, and thus the Federal Arbitration Act governs the interpretation and enforcement of this provision. This arbitration provision shall survive termination of these Terms of Use.
+
+Notwithstanding the provisions of the introductory section above, if we change this ‘Arbitration’ section after the date you first accepted these Terms of Use (or accepted any subsequent changes to these Terms of Use), you may reject any such change by sending us written notice within 30 days of the date such change became effective, as indicated in the “Date of Last Revision” date above or in the date of our email to you notifying you of such change. By rejecting any change, you are agreeing that you will arbitrate any dispute between you and us in accordance with the provisions of this section as of the date you first accepted these Terms of Use (or accepted any subsequent changes to these Terms of Use).</p>
+
+<h6 style="text-align: center;">Indemnity</h6>
+<p>You agree to release, indemnify and hold PrivateLoanWareHouse, its subsidiaries and affiliates, and each of their directors, officers, agents, contractors, partners and employees, harmless from and against any loss, liability, claim, demand, damages, costs and expenses, including reasonable attorney's fees, arising out of or in connection with your User Content, any Third Party Services or related content you post or share on or through the Service, your use of the Service, your conduct in connection with the Service or with other Users of the Service, or any violation of these Terms of Use or of any law or the rights of any third party.</p>
+
+<h6 style="text-align: center;">Submissions</h6>
+<p>You acknowledge and agree that any questions, comments, suggestions, ideas, feedback or other information about the Service ("Submissions"), provided by you to us are non-confidential and shall become the sole property of PrivateLoanWareHouse, and you hereby make all assignments necessary to accomplish such ownership. PrivateLoanWareHouse shall own exclusive rights, including all intellectual property rights, and shall be entitled to the unrestricted use and dissemination of these Submissions for any purpose, commercial or otherwise, without acknowledgment or compensation to you.</p>
+
+<h6 style="text-align: center;">Other</h6>
+<p>These Terms of Use constitute the entire agreement between you and PrivateLoanWareHouse and govern your use of the Service, superseding any prior agreements between you and PrivateLoanWareHouse with respect to the Service. You also may be subject to additional terms and conditions that may apply when you use affiliate or third-party services, third-party content or third-party software. The failure of PrivateLoanWareHouse to exercise or enforce any right or provision of these Terms of Use shall not constitute a waiver of such right or provision in that or any other instance. If any provision of these Terms of Use is held invalid, the remainder of these Terms of Use shall continue in full force and effect. If any provision of these Terms of Use shall be deemed unlawful, void or for any reason unenforceable, then that provision shall be deemed severable from these Terms of Use and shall not affect the validity and enforceability of any remaining provisions. A printed version of this agreement and of any notice given in electronic form will be admissible in judicial or administrative proceedings based upon or relating to this agreement to the same extent and subject to the same conditions as other business documents and records originally generated and maintained in printed form. You may not assign these Terms of Use without the prior written consent of PrivateLoanWareHouse, but we may assign or transfer these Terms of Use, in whole or in part, without restriction. The section titles in these Terms of Use are for convenience only and have no legal or contractual effect. Notices to you may be made via either email or regular mail. The Service may also provide notices to you of changes to these Terms of Use or other matters by displaying notices or links to notices generally on the Service.</p>
+
+                                                          </div>
+                                                          <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--  End step 4 -->
+
+                                </div>
+
+                                <div class="wizard-footer">
+                                    <div class="pull-right">
+                                        <input type='button' class='btn btn-next btn-primary' name='next' value='Next' />
+                                        <input type='button' class='btn btn-finish btn-primary ' name='finish' value='Finish' />
+                                    </div>
+
+                                    <div class="pull-left">
+                                        <input type='button' class='btn btn-previous btn-default' name='previous' value='Previous' />
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- End submit form -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+          <!-- Footer area-->
+
+
+
+
+{% endblock %}

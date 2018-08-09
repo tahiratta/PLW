@@ -1,0 +1,172 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block pagecontent %}
+
+
+
+
+     <!-- End of nav bar -->
+
+        <div class="page-head">
+            <div class="container">
+                <div class="row">
+                    <div class="page-head-content">
+                        <h1 class="page-title">Register account  </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End page header -->
+         <!-- register-area -->
+        <div class="register-area" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3" >
+                    <div class="box-for overflow">
+                    {#            start  edit code          #}
+
+                         <div class="col-md-12 col-xs-12 register-blocks">
+                            <h2>Register account : </h2>
+
+                             <form id="loginform" method="POST" class="post-form">
+                                 {% csrf_token %}
+
+                              <div class="form-group">
+                                    <label for="username">UserName </label>
+                                    <input type="text" class="form-control" id="username" name="username" onfocus="this.value=''"  required >
+                                    <span id="usernameError"></span>
+                                </div>
+
+
+{#                                <div class="form-group">#}
+{#                                    <label for="name">Name </label>#}
+{#                                    <input type="text" class="form-control" id='name' name="name" required>#}
+{#                                </div>#}
+
+                                  <div class="form-group">
+                                    <label for="firstname">First Name</label>
+                                    <input type="text" class="form-control" id="firstname" name="firstname" required>
+                                </div>
+                                  <div class="form-group">
+                                    <label for="lastname">Last Name</label>
+                                    <input type="text" class="form-control" id="lastname" name="lastname" required>
+                                </div>
+                                 <div class="form-group">
+                                    <label for="entityname">Entity Name</label>
+                                    <input type="text" class="form-control" id="entityname" name="entityname" required>
+                                </div>
+
+                                 <div class="form-group">
+                                    <label for="availablefund">Availble Funds</label>
+                                    <input type="text" class="form-control" id="availablefund" name="availablefund" required>
+                                </div>
+                                 <div class="form-group">
+                                    <label for="loanrange">Loan Range</label>
+                                    <input type="text" class="form-control" id="loanrange" name="loanrange" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="minloansize">Min Loan Size</label>
+                                    <input type="text" class="form-control" id="minloansize" name="minloansize" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="maxloansize">Max Loan Size</label>
+                                    <input type="text" class="form-control" id="maxloansize" name="maxloansize" required>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="mincradit">Min Cradit </label>
+                                    <input type="text" class="form-control" id="mincradit" name="mincradit" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="maxltv">Max  Ltv </label>
+                                    <input type="text" class="form-control" id="maxltv" name="maxltv" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="maxltc">Max  Ltc </label>
+                                    <input type="text" class="form-control" id="maxltc" name="maxltc" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="states">States </label>
+                                    <input type="text" class="form-control" id="states" name="states" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="propertytpe">Property Type </label>
+                                    <input type="text" class="form-control" id="propertytpe" name="propertytpe" required>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="foreclousure">Foreclousure </label>
+                                    <input type="checkbox" class="form-control" id="foreclousure" name="foreclousure" value="false">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" id="password" name="password" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="confirmpassword">Confirm Password</label>
+                                    <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" required>
+                                </div>
+
+                       <div class="text-center">
+                            <button id="signup" type="submit" class="save btn btn-default">Signup</button>
+                                  </div>
+                            </form>
+
+
+                        </div>
+                    {#             end here edit            #}
+
+
+                    </div>
+                </div>
+                </div>
+
+
+            </div>
+        </div>
+
+          <!-- Footer area-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+
+<script>
+    $("#username").change(function () {
+      var username = $(this).val();
+      console.log( $(this).val() );
+      $.ajax({
+        url: '/ajax/validate_username/',
+        data: {
+          'username': username
+        },
+        dataType: 'json',
+        success: function (data) {
+          if (data.is_taken) {
+              $('#usernameError').html("A user with this username already exists.");
+              $("#signup").attr('disabled', true);
+          }
+          else {
+              $('#usernameError').html("ok.");
+              $("#signup").attr('disabled', false);
+           }
+        }
+      });
+
+    });
+  </script>
+
+
+{% endblock %}
